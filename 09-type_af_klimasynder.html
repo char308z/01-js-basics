@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08_co2_beregning</title>
+  </head>
+  <body>
+    <script>
+      let timer = 20;
+      let respons;
+      let co2UdledtIKgVedFlyrejse = timer * 109;
+
+      let resultat = `Ved ${timer} timers flyrejse har du udledt ${co2UdledtIKgVedFlyrejse} kg CO2.`;
+
+      if (co2UdledtIKgVedFlyrejse < 100) {
+        respons = " Tæt på Thunberg";
+      } else if (
+        co2UdledtIKgVedFlyrejse > 100 &&
+        co2UdledtIKgVedFlyrejse < 200
+      ) {
+        respons = " Ja ja, du behøver ikke at melde dig ud af Å!";
+      } else if (
+        co2UdledtIKgVedFlyrejse > 200 &&
+        co2UdledtIKgVedFlyrejse < 600
+      ) {
+        respons = " Det er godt for turismen i nordeuropa";
+      } else if (co2UdledtIKgVedFlyrejse > 600) {
+        respons = " Nå ja vi kan jo altid kolonisere en anden planet ...";
+      }
+
+      console.log(resultat + respons);
+    </script>
+  </body>
+</html>
