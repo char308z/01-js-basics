@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Hvis arealet er under 100, skal der stå: Arealet er for lilleEr arealet mellem 100 og 200, skal der stå: Arealet er okEr det større end (eller lig med)  200, skal der stå: Arealet er for stort
+      let længde = 4;
+      let bredde = 25;
+      let areal = længde * bredde;
+      let resultat;
+
+      if (areal < 100) {
+        resultat = "Arealet er for lille";
+      } else if (areal < 200) {
+        resultat = "Arealet er ok";
+      } else {
+        resultat = "Arealet er for stort";
+      }
+
+      console.log(resultat);
+    </script>
+  </body>
+</html>
