@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10_co2_beregning</title>
+  </head>
+  <body>
+    <p>Antal timer du flyver</p>
+    <input type="text" id="timer" />
+    <button>Klik og se dit co2 forbrug i consolen</button>
+    <script>
+      let timer = document.querySelector("#timer").value;
+      let resultat;
+      let co2UdledtIKgVedFlyrejse = timer * 109;
+
+      document.querySelector("button").addEventListener("click", buttonClicked);
+      function buttonClicked() {
+        if (isNaN(timer)) {
+          resultat = "dettet er ikke er et tal";
+        } else {
+          resultat = `Ved ${timer} timers flyrejse har du udledt ${co2UdledtIKgVedFlyrejse} kg CO2.`;
+        }
+
+        console.log(resultat);
+      }
+    </script>
+  </body>
+</html>
